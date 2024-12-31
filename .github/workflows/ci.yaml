@@ -96,7 +96,7 @@ jobs:
         # * each remaining version is covered by at least one test
         # !!!NOTE!!! if newer versions are added, update sony_custom_layers.__init__ pinned_requirements
         py_ver: [ "3.8", "3.9", "3.10", "3.11" ]
-        torch_ver: ["2.0", "2.1", "2.2", "2.3", "2.4"]
+        torch_ver: ["2.0", "2.1", "2.2", "2.3", "2.4", "2.5"]
         ort_ver: ["1.15", "1.19"]
         ort_ext_ver: ["0.8", "0.12"]
         onnx_ver: ["1.14", "1.16"]
@@ -105,6 +105,8 @@ jobs:
             ort_ext_ver: "0.8"    
         include:
           # torchvision ver is coupled to a specific torch ver
+          - torch_ver: "2.5"
+            torchvision_ver: "0.20"
           - torch_ver: "2.4"
             torchvision_ver: "0.19"
           - torch_ver: "2.3"
@@ -116,6 +118,12 @@ jobs:
           - torch_ver: "2.0"
             torchvision_ver: "0.15"
           # non-covered versions (ort, ort-ext, onnx)
+          - py_ver: "3.11"
+            torch_ver: "2.5"
+            torchvision_ver: "0.20"
+            ort_ver: "1.16"
+            ort_ext_ver: "0.9"
+            onnx_ver: "1.15"
           - py_ver: "3.11"
             torch_ver: "2.4"
             torchvision_ver: "0.19"

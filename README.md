@@ -49,7 +49,7 @@ pip install sony-custom-layers[torch]
 
 | **Tested FW versions**                                                                                                   | **Tested Python version** | **Serialization**              |
 |--------------------------------------------------------------------------------------------------------------------------|---------------------------|--------------------------------|
-| torch 2.0-2.4<br/>torchvision 0.15-0.19<br/>onnxruntime 1.15-1.19<br/>onnxruntime_extensions 0.8-0.12<br/>onnx 1.14-1.16 | 3.8-3.11                  | .onnx (via torch.onnx.export)  |
+| torch 2.0-2.5<br/>torchvision 0.15-0.19<br/>onnxruntime 1.15-1.19<br/>onnxruntime_extensions 0.8-0.12<br/>onnx 1.14-1.16 | 3.8-3.11                  | .onnx (via torch.onnx.export)  |
 
 ## API
 For sony-custom-layers API see https://sony.github.io/custom_layers
