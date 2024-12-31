@@ -27,6 +27,7 @@ jobs:
           ./install-pre-commit.sh
           pre-commit run --all
       - name: generate docs
+        if: ${{ github.repository_owner == 'sony' }}
         run: |
           ./generate_docs.sh
           if [ -n "$(git status docs --porcelain)" ];then
